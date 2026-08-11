@@ -1,0 +1,723 @@
+css
+/* =====================================================
+   💕 ENTRE NOSOTROS — CUTE / PASTEL
+   STYLE.CSS COMPLETO
+   ===================================================== */
+
+
+/* =====================================================
+   🔧 RESET
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =====================================================
+   🌸 BODY
+   ===================================================== */
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 10% 20%, #ffdce8 0%, transparent 30%),
+    radial-gradient(circle at 90% 10%, #e7ddff 0%, transparent 30%),
+    radial-gradient(circle at 50% 100%, #dff8f2 0%, transparent 35%),
+    #fff9fc;
+
+  color: #403642;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   📱 CONTENEDOR PRINCIPAL
+   ===================================================== */
+
+.app {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 25px 50px;
+}
+
+
+/* =====================================================
+   🏠 PANTALLA DE INICIO
+   ===================================================== */
+
+#home {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+
+/* =====================================================
+   💕 HEADER
+   ===================================================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.logo {
+  font-size: 2.3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  color: #d94f83;
+
+  text-shadow:
+    0 3px 0 rgba(255, 255, 255, 0.8);
+}
+
+.header p {
+  max-width: 600px;
+  margin: 12px auto 0;
+
+  font-size: 1.05rem;
+  line-height: 1.6;
+
+  color: #746574;
+}
+
+
+/* =====================================================
+   ❓ TÍTULO PRINCIPAL
+   ===================================================== */
+
+#home h1 {
+  text-align: center;
+
+  margin-bottom: 28px;
+
+  font-size: 1.8rem;
+
+  color: #514354;
+}
+
+
+/* =====================================================
+   🗂️ CATEGORÍAS
+   ===================================================== */
+
+.categories {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   💳 TARJETA DE CATEGORÍA
+   ===================================================== */
+
+.category {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 65px 1fr;
+
+  grid-template-areas:
+    "icon title"
+    "icon description";
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 125px;
+
+  padding: 22px;
+
+  border: none;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  box-shadow:
+    0 10px 30px rgba(112, 75, 105, 0.10);
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =====================================================
+   ✨ HOVER
+   ===================================================== */
+
+.category:hover {
+  transform: translateY(-6px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 35px rgba(112, 75, 105, 0.17);
+}
+
+.category:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+
+/* =====================================================
+   😍 ICONOS
+   ===================================================== */
+
+.category .icon {
+  grid-area: icon;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 18px;
+
+  background: #fff0f6;
+
+  font-size: 1.8rem;
+
+  box-shadow:
+    0 5px 15px rgba(214, 87, 130, 0.10);
+}
+
+
+/* =====================================================
+   📝 NOMBRE DE CATEGORÍA
+   ===================================================== */
+
+.category-name {
+  grid-area: title;
+
+  font-size: 1.08rem;
+  font-weight: 800;
+
+  color: #4b3c4d;
+
+  margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   📄 DESCRIPCIÓN
+   ===================================================== */
+
+.description {
+  grid-area: description;
+
+  font-size: 0.88rem;
+  line-height: 1.4;
+
+  color: #877687;
+}
+
+
+/* =====================================================
+   🎮 PANTALLA DEL JUEGO
+   ===================================================== */
+
+#game {
+  display: none;
+
+  animation: fadeIn 0.45s ease;
+}
+
+
+/* =====================================================
+   ⬅️ BOTÓN VOLVER
+   ===================================================== */
+
+.back-button {
+  border: none;
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #7d6275;
+
+  padding: 11px 17px;
+
+  border-radius: 14px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px rgba(100, 70, 95, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.back-button:hover {
+  background: white;
+  transform: translateX(-4px);
+}
+
+
+/* =====================================================
+   💕 HEADER DEL JUEGO
+   ===================================================== */
+
+.game-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 35px 0 30px;
+
+  text-align: center;
+}
+
+.game-header span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 18px;
+
+  background: #fff0f6;
+
+  font-size: 1.8rem;
+}
+
+.game-header h2 {
+  font-size: 1.7rem;
+
+  color: #514354;
+}
+
+
+/* =====================================================
+   🃏 CONTENEDOR DE LA TARJETA
+   ===================================================== */
+
+.card-container {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+
+/* =====================================================
+   💌 TARJETA DE PREGUNTA
+   ===================================================== */
+
+.question-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 760px;
+
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 60px;
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 247, 251, 0.94)
+    );
+
+  box-shadow:
+    0 20px 50px rgba(112, 75, 105, 0.14);
+
+  text-align: center;
+
+  overflow: hidden;
+
+  animation: cardAppear 0.45s ease;
+}
+
+
+/* =====================================================
+   🌸 DECORACIÓN DE LA TARJETA
+   ===================================================== */
+
+.question-card::before {
+  content: "💕";
+
+  position: absolute;
+
+  top: -15px;
+  left: -10px;
+
+  font-size: 5rem;
+
+  opacity: 0.08;
+
+  transform: rotate(-20deg);
+}
+
+.question-card::after {
+  content: "✨";
+
+  position: absolute;
+
+  bottom: -15px;
+  right: -5px;
+
+  font-size: 5rem;
+
+  opacity: 0.08;
+
+  transform: rotate(15deg);
+}
+
+
+/* =====================================================
+   🏷️ ETIQUETA
+   ===================================================== */
+
+.card-label {
+  position: absolute;
+
+  top: 25px;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  color: #d46b91;
+
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   ❓ PREGUNTA
+   ===================================================== */
+
+#question {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+  font-size: 1.55rem;
+
+  line-height: 1.6;
+
+  font-weight: 700;
+
+  color: #493c4a;
+}
+
+
+/* =====================================================
+   🎮 CONTROLES
+   ===================================================== */
+
+.game-controls {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 30px;
+}
+
+
+/* =====================================================
+   🎲 BOTÓN SIGUIENTE
+   ===================================================== */
+
+.next-button {
+  border: none;
+
+  padding: 16px 30px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e879a2,
+      #d75f91
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(215, 95, 145, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.next-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(215, 95, 145, 0.32);
+}
+
+.next-button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+
+/* =====================================================
+   🔢 CONTADOR
+   ===================================================== */
+
+.counter {
+  text-align: center;
+
+  margin-top: 18px;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  color: #927f8e;
+}
+
+
+/* =====================================================
+   ✨ ANIMACIONES
+   ===================================================== */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes cardAppear {
+
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+}
+
+
+/* =====================================================
+   📱 TABLETS
+   ===================================================== */
+
+@media (max-width: 750px) {
+
+  .app {
+    padding: 25px 18px 40px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    font-size: 1.9rem;
+  }
+
+  #home h1 {
+    font-size: 1.5rem;
+  }
+
+  .question-card {
+    min-height: 280px;
+
+    padding:
+      55px 35px;
+  }
+
+  #question {
+    font-size: 1.35rem;
+  }
+
+}
+
+
+/* =====================================================
+   📱 CELULARES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .app {
+    padding:
+      20px 14px 35px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    font-size: 1.55rem;
+    letter-spacing: 1px;
+  }
+
+  .header p {
+    font-size: 0.92rem;
+  }
+
+  #home h1 {
+    font-size: 1.3rem;
+  }
+
+  .category {
+    grid-template-columns: 55px 1fr;
+
+    min-height: 110px;
+
+    padding: 17px;
+
+    border-radius: 20px;
+  }
+
+  .category .icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 1.5rem;
+
+    border-radius: 15px;
+  }
+
+  .category-name {
+    font-size: 0.98rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .game-header {
+    margin-top: 25px;
+
+    gap: 8px;
+  }
+
+  .game-header span {
+    width: 45px;
+    height: 45px;
+
+    font-size: 1.5rem;
+
+    border-radius: 14px;
+  }
+
+  .game-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .question-card {
+    min-height: 300px;
+
+    padding:
+      60px 22px 45px;
+
+    border-radius: 25px;
+  }
+
+  #question {
+    font-size: 1.18rem;
+
+    line-height: 1.55;
+  }
+
+  .next-button {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    font-size: 0.95rem;
+  }
+
+}
+
+
+/* =====================================================
+   💕 ACCESIBILIDAD
+   ===================================================== */
+
+button:focus-visible {
+  outline: 3px solid #e7a7c0;
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   🖱️ EVITAR SELECCIÓN ACCIDENTAL
+   ===================================================== */
+
+.category,
+.next-button,
+.back-button {
+  user-select: none;
+}
